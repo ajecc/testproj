@@ -1,11 +1,22 @@
-import argparse
 from clearml import Task
+from dataclasses import dataclass, field
+import draccus
+
+@dataclass
+class DatasetConfig:
+    type: str         # e.g. "hf", "s3", "local"
+    id: str   # e.g. dataset name / path / uuid
+
+@dataclass
+class Config:
+    dataset: DatasetConfig
+
+@draccus.wrap()
+def main(cfg: Config):
+    task = Task.init("test", "test")
+    print("dataset.type =", cfg.dataset.type)
+    print("dataset.id   =", cfg.dataset.id)
 
 if __name__ == "__main__":
-    print("are we local???", Task.running_locally())
-    task = Task.init(project_name="testproj", task_name="testfile", reuse_last_task_id=False)
-    p = argparse.ArgumentParser()
-    p.add_argument("config", type=argparse.FileType("r"))
-    args = p.parse_args()
-    print("got config", args.config)
-    task.execute_remotely(queue_name="Eugene")
+    main()
+
