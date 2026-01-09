@@ -79,7 +79,7 @@ wheels = [
 
 [[package]]
 name = "clearml"
-version = "2.0.2"
+version = "2.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
@@ -99,7 +99,7 @@ dependencies = [
     { name = "urllib3" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/34/91/320495b02e57228f00ed9b9db270be561974860c8648b77d4baf3e162397/clearml-2.0.2-py2.py3-none-any.whl", hash = "sha256:6d17724eb297a71ff66fdcd157d0cfa7978c857bdce6b339ef1b3927a959c79a", size = 1211791, upload-time = "2025-07-10T12:01:02.311Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/e0/e8adcfdb69e44de8f854defc1de91ffe102c73563a31d62233cbe17cfed6/clearml-2.1.2-py2.py3-none-any.whl", hash = "sha256:0f6aa44d03339ea18c3904e6c01ff7286782bf0dd054d8879efd3b622e5b712d", size = 1381088, upload-time = "2026-01-09T08:50:05.852Z" },
 ]
 
 [[package]]
@@ -187,7 +187,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "clearml", specifier = "==2.0.2" },
+    { name = "clearml", specifier = "==2.1.2" },
     { name = "draccus", specifier = "==0.10.0" },
 ]
 
