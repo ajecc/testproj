@@ -1,4 +1,5 @@
 from clearml import Task
+print(Task.running_locally())
 from dataclasses import dataclass, field
 import draccus
 
